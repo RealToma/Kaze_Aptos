@@ -521,6 +521,7 @@ const ButtonVaultExplore01 = styled(Box)`
 
   color: #212121;
   margin-top: 60px;
+  margin-bottom: 100px;
   transition: 0.3s;
   cursor: pointer;
   &:hover {
