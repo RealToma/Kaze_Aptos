@@ -15,7 +15,8 @@ const CartEarn = ({ each }) => {
 const StyledComponent = styled(Box)`
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 100%;
+  flex: 1;
   padding: 24px;
   box-sizing: border-box;
   background: #ffffff;
@@ -26,7 +27,7 @@ const StyledComponent = styled(Box)`
   cursor: pointer;
   &:hover {
     background-color: #212121;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 1);
+    box-shadow: 0px 8px 24px rgba(0, 0, 5, 1);
     > div:nth-child(1) {
       color: #212121;
       background: #ffffff;

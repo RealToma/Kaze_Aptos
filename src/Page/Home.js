@@ -1,14 +1,21 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Box } from "@mui/material";
+import { FaShapes } from "react-icons/fa";
 import { MdArrowRightAlt } from "react-icons/md";
+import ButtonEarn from "./Component/ButtonEarn";
+import CartEarn from "./Component/CartEarn";
+import CartVault from "./Component/CartVault";
 import imgNFT01 from "../Asset/Image/Home/NFT-1.png";
 import imgNFT02 from "../Asset/Image/Home/NFT-2.png";
 import imgNFT03 from "../Asset/Image/Home/NFT-3.png";
 import imgNFT04 from "../Asset/Image/Home/NFT-1.png";
-import ButtonEarn from "./Component/ButtonEarn";
-import CartEarn from "./Component/CartEarn";
-import { FaShapes } from "react-icons/fa";
+import imgETH from "../Asset/Image/Home/Coins/eth.png";
+import imgBNB from "../Asset/Image/Home/Coins/bnb.png";
+import imgUSDC from "../Asset/Image/Home/Coins/usdc.png";
+import imgUSDT from "../Asset/Image/Home/Coins/usdt.png";
+import imgDAI from "../Asset/Image/Home/Coins/dai.png";
+import imgADA from "../Asset/Image/Home/Coins/ada.png";
 
 const dataEarn = [
   {
@@ -30,6 +37,73 @@ const dataEarn = [
     icon: <FaShapes />,
     name: "Autox",
     text: "Invest your token in a KAZE Single Asset Vault. Invest your token in a KAZE Single Asset Vault.",
+  },
+];
+
+const dataVaults = [
+  {
+    imgLeftCoin: imgUSDC,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "USDC",
+    textRightCoin: "USDT",
+    apy: "4.67%",
+    daily: "0.0099%",
+  },
+  {
+    imgLeftCoin: imgETH,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "ETH",
+    textRightCoin: "USDT",
+    apy: "1.45%",
+    daily: "0.056%",
+  },
+  {
+    imgLeftCoin: imgADA,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "ADA",
+    textRightCoin: "USDT",
+    apy: "6.33%",
+    daily: "0.33%",
+  },
+  {
+    imgLeftCoin: imgDAI,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "DAI",
+    textRightCoin: "USDT",
+    apy: "2.86%",
+    daily: "0.69%",
+  },
+  {
+    imgLeftCoin: imgBNB,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "BNB",
+    textRightCoin: "USDT",
+    apy: "4.67%",
+    daily: "0.0099%",
+  },
+  {
+    imgLeftCoin: imgETH,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "ETH",
+    textRightCoin: "USDT",
+    apy: "1.45%",
+    daily: "0.056%",
+  },
+  {
+    imgLeftCoin: imgADA,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "ADA",
+    textRightCoin: "USDT",
+    apy: "6.33%",
+    daily: "0.33%",
+  },
+  {
+    imgLeftCoin: imgDAI,
+    imgRightCoin: imgUSDT,
+    textLeftCoin: "DAI",
+    textRightCoin: "USDT",
+    apy: "2.86%",
+    daily: "0.69%",
   },
 ];
 
@@ -132,6 +206,15 @@ const Home = () => {
           </SlideEarnGroup01>
         </MaxEarn01>
       </BoxEarn01>
+      <BoxFeatureVault01>
+        <TextBig01>Featured Vaults</TextBig01>
+        <CartVaults01>
+          {dataVaults.map((each, index) => {
+            return <CartVault key={index} each={each} />;
+          })}
+        </CartVaults01>
+        <ButtonVaultExplore01>Explore Values</ButtonVaultExplore01>
+      </BoxFeatureVault01>
     </StyledComponent>
   );
 };
@@ -391,9 +474,58 @@ const ButtonEarnGroup01 = styled(Box)`
 const SlideEarnGroup01 = styled(Box)`
   display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 30px;
   margin-top: 65px;
+`;
+
+const BoxFeatureVault01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 100px;
+  box-sizing: border-box;
+  margin-top: 120px;
+`;
+
+const CartVaults01 = styled(Box)`
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-top: 30px;
+`;
+
+const ButtonVaultExplore01 = styled(Box)`
+  display: flex;
+  width: 160px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #121212;
+  border-radius: 39px;
+  font-family: "Clash Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  text-align: center;
+
+  /* Black/800 */
+
+  color: #212121;
+  margin-top: 60px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    text-shadow: 0px 0px 5px;
+  }
 `;
 
 export default Home;
