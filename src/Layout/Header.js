@@ -22,10 +22,12 @@ const Header = () => {
 const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
+  max-width: 1440px;
   align-items: center;
   padding: 15px 100px;
   box-sizing: border-box;
   justify-content: space-between;
+  z-index: 100;
 `;
 
 const BoxLogo01 = styled(Box)`
@@ -62,9 +64,10 @@ const Link01 = styled(Box)`
   margin-left: 15px;
   margin-right: 15px;
 
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
   &:hover {
+    /* transform: scale(1.2); */
     text-shadow: 0px 0px 5px #121212;
   }
 `;
@@ -84,7 +87,7 @@ const ButtonLogin = styled(Box)`
   /* identical to box height, or 125% */
   /* Black/900 */
   color: #121212;
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
   &:hover {
     text-shadow: 0px 0px 5px #121212;
@@ -110,11 +113,12 @@ const ButtonSignup = styled(Box)`
   text-align: center;
   /* White */
   color: #ffffff;
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
   &:hover {
     text-shadow: 0px 0px 5px #ffffff;
   }
 `;
+
 
 export default Header;
