@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { MdArrowRightAlt } from "react-icons/md";
@@ -5,8 +6,41 @@ import imgNFT01 from "../Asset/Image/Home/NFT-1.png";
 import imgNFT02 from "../Asset/Image/Home/NFT-2.png";
 import imgNFT03 from "../Asset/Image/Home/NFT-3.png";
 import imgNFT04 from "../Asset/Image/Home/NFT-1.png";
+import ButtonEarn from "./Component/ButtonEarn";
+import CartEarn from "./Component/CartEarn";
+import { FaShapes } from "react-icons/fa";
+
+const dataEarn = [
+  {
+    icon: <FaShapes />,
+    name: "Stake",
+    text: "Invest your token in a KAZE Single Asset Vault. Invest your token in a KAZE Single Asset Vault.",
+  },
+  {
+    icon: <FaShapes />,
+    name: "Earn",
+    text: "Invest your token in a KAZE Single Asset Vault. Invest your token in a KAZE Single Asset Vault.",
+  },
+  {
+    icon: <FaShapes />,
+    name: "Reinvest",
+    text: "Invest your token in a KAZE Single Asset Vault. Invest your token in a KAZE Single Asset Vault.",
+  },
+  {
+    icon: <FaShapes />,
+    name: "Autox",
+    text: "Invest your token in a KAZE Single Asset Vault. Invest your token in a KAZE Single Asset Vault.",
+  },
+];
 
 const Home = () => {
+  const [flagButtonEarn, setFlagButtonEarn] = useState([
+    true,
+    false,
+    false,
+    false,
+  ]);
+
   return (
     <StyledComponent>
       <BackCircle01></BackCircle01>
@@ -62,6 +96,42 @@ const Home = () => {
           </EachStatistics01>
         </MaxStatistics01>
       </Boxstatistics01>
+      <BoxEarn01>
+        <MaxEarn01>
+          <TextBig01>Earn with Kaze</TextBig01>
+          <ButtonEarnGroup01>
+            <ButtonEarn
+              text={"Single Asset"}
+              index={0}
+              flagClicked={flagButtonEarn}
+              setFlagClicked={setFlagButtonEarn}
+            />
+            <ButtonEarn
+              text={"Liquidity Pools"}
+              index={1}
+              flagClicked={flagButtonEarn}
+              setFlagClicked={setFlagButtonEarn}
+            />
+            <ButtonEarn
+              text={"Earning Pools"}
+              index={2}
+              flagClicked={flagButtonEarn}
+              setFlagClicked={setFlagButtonEarn}
+            />
+            <ButtonEarn
+              text={"ZAP"}
+              index={3}
+              flagClicked={flagButtonEarn}
+              setFlagClicked={setFlagButtonEarn}
+            />
+          </ButtonEarnGroup01>
+          <SlideEarnGroup01>
+            {dataEarn.map((each, index) => {
+              return <CartEarn key={index} each={each} />;
+            })}
+          </SlideEarnGroup01>
+        </MaxEarn01>
+      </BoxEarn01>
     </StyledComponent>
   );
 };
@@ -269,10 +339,61 @@ const EachStatistics01 = styled(Box)`
 const TextLeftStatics01 = styled(Box)`
   display: flex;
   color: white;
+  margin-right: 10px;
 `;
 const TextRightStatics01 = styled(Box)`
   display: flex;
   color: #605f5f;
+`;
+
+const BoxEarn01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
+  z-index: 30;
+`;
+
+const MaxEarn01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  padding: 0px 100px;
+  box-sizing: border-box;
+  margin-top: 120px;
+`;
+
+const TextBig01 = styled(Box)`
+  display: flex;
+  font-family: "Clash Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  /* identical to box height, or 121% */
+
+  text-align: center;
+
+  /* Black/900 */
+
+  color: #121212;
+`;
+
+const ButtonEarnGroup01 = styled(Box)`
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const SlideEarnGroup01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 65px;
 `;
 
 export default Home;
