@@ -47,7 +47,20 @@ const Home = () => {
         </BoxIntroNFTGroup01>
       </BoxIntroduction01>
       <Boxstatistics01>
-        <MaxStatistics01></MaxStatistics01>
+        <MaxStatistics01>
+          <EachStatistics01>
+            <TextLeftStatics01>10k+{"\u00a0"}</TextLeftStatics01>
+            <TextRightStatics01>Rare NFTs</TextRightStatics01>
+          </EachStatistics01>
+          <EachStatistics01>
+            <TextLeftStatics01>50k+{"\u00a0"}</TextLeftStatics01>
+            <TextRightStatics01>Projects</TextRightStatics01>
+          </EachStatistics01>
+          <EachStatistics01>
+            <TextLeftStatics01>60k+{"\u00a0"}</TextLeftStatics01>
+            <TextRightStatics01>Artist NFTs</TextRightStatics01>
+          </EachStatistics01>
+        </MaxStatistics01>
       </Boxstatistics01>
     </StyledComponent>
   );
@@ -226,15 +239,40 @@ const Boxstatistics01 = styled(Box)`
   background-color: #121212;
   z-index: 20;
   margin-top: 30px;
+  justify-content: center;
 `;
 
 const MaxStatistics01 = styled(Box)`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 1440px;
-  padding: 100px;
+  padding: 0px 100px;
   box-sizing: border-box;
+`;
+
+const EachStatistics01 = styled(Box)`
+  display: flex;
+  align-items: center;
+  font-family: "Clash Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  /* identical to box height, or 130% */
+
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+`;
+
+const TextLeftStatics01 = styled(Box)`
+  display: flex;
+  color: white;
+`;
+const TextRightStatics01 = styled(Box)`
+  display: flex;
+  color: #605f5f;
 `;
 
 export default Home;
