@@ -18,6 +18,7 @@ const Footer = () => {
               <MdArrowRightAlt />
             </ButtonEmailSend01>
           </BoxInputEmail01>
+          <BoxSocialLink01></BoxSocialLink01>
         </MaxSubscribe01>
       </BoxSubscribe01>
     </StyledComponent>
@@ -101,6 +102,11 @@ const ButtonEmailSend01 = styled(Box)`
   color: white;
   font-size: 1.6rem;
   cursor: pointer;
+`;
+
+const BoxSocialLink01 = styled(Box)`
+  display: flex;
+  align-items: center;
 `;
 
 export default Footer;
