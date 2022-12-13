@@ -8,15 +8,16 @@ const Footer = () => {
       <BoxSubscribe01>
         <MaxSubscribe01>
           <TextSubscribe01>Subscribe to our Newsletter</TextSubscribe01>
-          <InputEmail01
-          // component={"input"}
-          // type={"text"}
-          // placeholder={"Your email"}
-          >
+          <BoxInputEmail01>
+            <InputEmail01
+              component={"input"}
+              type={"text"}
+              placeholder={"Your email"}
+            ></InputEmail01>
             <ButtonEmailSend01>
               <MdArrowRightAlt />
             </ButtonEmailSend01>
-          </InputEmail01>
+          </BoxInputEmail01>
         </MaxSubscribe01>
       </BoxSubscribe01>
     </StyledComponent>
@@ -60,15 +61,23 @@ const TextSubscribe01 = styled(Box)`
   color: #ffffff;
 `;
 
-const InputEmail01 = styled(Box)`
+const BoxInputEmail01 = styled(Box)`
   display: flex;
   align-items: center;
   width: 312px;
   height: 52px;
   border-radius: 50px;
   background: #ffffff;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 10px 0px 30px;
   box-sizing: border-box;
+`;
+const InputEmail01 = styled(Box)`
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-right: 5px;
+  outline: none;
+  border: none;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
