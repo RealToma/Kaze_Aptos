@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
 import { MdArrowRightAlt } from "react-icons/md";
+import { RxDiscordLogo } from "react-icons/rx";
+import {
+  TbBrandTwitter,
+  TbBrandFacebook,
+  TbBrandInstagram,
+  TbBrandTelegram,
+} from "react-icons/tb";
 
 const Footer = () => {
   return (
@@ -18,7 +25,23 @@ const Footer = () => {
               <MdArrowRightAlt />
             </ButtonEmailSend01>
           </BoxInputEmail01>
-          <BoxSocialLink01></BoxSocialLink01>
+          <BoxSocialLink01>
+            <LinkEachButton01>
+              <TbBrandTwitter />
+            </LinkEachButton01>
+            <LinkEachButton01>
+              <RxDiscordLogo />
+            </LinkEachButton01>
+            <LinkEachButton01>
+              <TbBrandFacebook />
+            </LinkEachButton01>
+            <LinkEachButton01>
+              <TbBrandInstagram />
+            </LinkEachButton01>
+            <LinkEachButton01>
+              <TbBrandTelegram />
+            </LinkEachButton01>
+          </BoxSocialLink01>
         </MaxSubscribe01>
       </BoxSubscribe01>
     </StyledComponent>
@@ -107,6 +130,24 @@ const ButtonEmailSend01 = styled(Box)`
 const BoxSocialLink01 = styled(Box)`
   display: flex;
   align-items: center;
+`;
+
+const LinkEachButton01 = styled(Box)`
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: #212121;
+    border-radius: 80px;
+  }
 `;
 
 export default Footer;
