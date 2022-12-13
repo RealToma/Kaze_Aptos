@@ -44,6 +44,22 @@ const Footer = () => {
           </BoxSocialLink01>
         </MaxSubscribe01>
       </BoxSubscribe01>
+      <BoxContent01>
+        <MaxContent01>
+          <TextBig01>KAZE</TextBig01>
+          <TextSmall01>By NFT People, for NFT People</TextSmall01>
+        </MaxContent01>
+      </BoxContent01>
+      <BoxBottom01>
+        <MaxBottom01>
+          <LinkEachText01>Copyright 2022. Kaze</LinkEachText01>
+          <LinkEachText01>About</LinkEachText01>
+          <LinkEachText01>API</LinkEachText01>
+          <LinkEachText01>Help</LinkEachText01>
+          <LinkEachText01>Privacy Policy</LinkEachText01>
+          <LinkEachText01>Terms of Conditions</LinkEachText01>
+        </MaxBottom01>
+      </BoxBottom01>
     </StyledComponent>
   );
 };
@@ -51,6 +67,7 @@ const Footer = () => {
 const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
+  flex-direction: column;
   z-index: 99;
 `;
 
@@ -147,6 +164,93 @@ const LinkEachButton01 = styled(Box)`
   &:hover {
     background: #212121;
     border-radius: 80px;
+  }
+`;
+
+const BoxContent01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  background: #212121;
+  justify-content: center;
+`;
+
+const MaxContent01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const TextBig01 = styled(Box)`
+  display: flex;
+  font-family: "Clash Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  /* identical to box height, or 130% */
+
+  /* White */
+
+  color: #ffffff;
+  margin-top: 65px;
+`;
+
+const TextSmall01 = styled(Box)`
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+
+  /* White */
+
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 65px;
+`;
+
+const BoxBottom01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  height: 90px;
+  border-top: 1px solid #605f5f;
+  background: #212121;
+  justify-content: center;
+  align-items: center;
+`;
+
+const MaxBottom01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
+const LinkEachText01 = styled(Box)`
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+
+  /* Black/400 */
+
+  color: #c4c4c4;
+  margin-left: 40px;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: white;
+    text-shadow: 0px 0px 10px white;
   }
 `;
 
