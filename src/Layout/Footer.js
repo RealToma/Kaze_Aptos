@@ -69,6 +69,7 @@ const StyledComponent = styled(Box)`
   width: 100%;
   flex-direction: column;
   z-index: 99;
+  margin-top: 120px;
 `;
 
 const BoxSubscribe01 = styled(Box)`

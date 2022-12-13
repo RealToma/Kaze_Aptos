@@ -215,6 +215,28 @@ const Home = () => {
         </CartVaults01>
         <ButtonVaultExplore01>Explore Values</ButtonVaultExplore01>
       </BoxFeatureVault01>
+      <BoxEcosystem01>
+        <BoxLeftEcosystem01>
+          <TextBig01>Our Ecosystem</TextBig01>
+          <TextName01>Concept and Mission</TextName01>
+          <TextSmall01>
+            More than 60+ Brands have been working with us, growing and
+            extending crypto ecosystem. Kaze is easy to use and powerful to
+            build with. Every aspect of the platform was designed from the
+            ground up to support exceptional user experience at a mainstream
+            scale.
+          </TextSmall01>
+          <ButtonLearnMore01>
+            <Box display={"flex"} mr={"5px"}>
+              Learn More
+            </Box>
+            <Box display={"flex"} fontSize={"1.5rem"}>
+              <MdArrowRightAlt />
+            </Box>
+          </ButtonLearnMore01>
+        </BoxLeftEcosystem01>
+        <BoxRightEcosystem01></BoxRightEcosystem01>
+      </BoxEcosystem01>
     </StyledComponent>
   );
 };
@@ -521,11 +543,86 @@ const ButtonVaultExplore01 = styled(Box)`
 
   color: #212121;
   margin-top: 60px;
-  margin-bottom: 100px;
   transition: 0.3s;
   cursor: pointer;
   &:hover {
     text-shadow: 0px 0px 5px;
+  }
+`;
+
+const BoxEcosystem01 = styled(Box)`
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 120px;
+`;
+
+const BoxLeftEcosystem01 = styled(Box)`
+  display: flex;
+  flex-direction: column;
+`;
+
+const TextName01 = styled(Box)`
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  /* Black/600 */
+
+  color: #605f5f;
+  margin-top: 20px;
+`;
+
+const TextSmall01 = styled(Box)`
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 167% */
+
+  /* Black/600 */
+
+  color: #605f5f;
+  margin-top: 10px;
+  width: 488px;
+`;
+
+const BoxRightEcosystem01 = styled(Box)`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ButtonLearnMore01 = styled(Box)`
+  display: flex;
+  width: 165px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  background: #212121;
+  border-radius: 39px;
+  font-family: "Clash Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #212121;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    text-shadow: 0px 0px 5px #ffffff;
   }
 `;
 
