@@ -36,7 +36,7 @@ const StyledComponent = styled(Box)`
       color: white;
     }
     > div:nth-child(3) {
-      color: #eaeaea;
+      color: #EAEAEA;
     }
   }
 `;
